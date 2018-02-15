@@ -68,8 +68,8 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
 {
   "@context": {
      "@language": "en", 
-     "@vocab": "http://schema.org",
-     "off": "http://openfoodfacts/schema/0.1/#"
+     "@vocab": "http://schema.org/",
+     "off": "http://openfoodfacts.org/schema/0.1/#"
    },
   "@type": "Product",
   "additionalType": "off:OpenFoodFactsListing",
