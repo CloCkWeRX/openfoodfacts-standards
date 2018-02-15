@@ -29,13 +29,15 @@ An OpenFoodFacts.org listing is a subclass of [schema.org/Product](http://schema
  * brand - the primary [schema.org/brand](http://schema.org/brand)
  * off:quantity - a string containing the units (Example: 350 g, 1 L)
  * off:ingredients_description - A textual ingredients description as per food labelling standards. Where possible, allegens can be highlighted with the use of underscores.
- * off:product_official_url - A link to an official product page.
- * off:product_image_front_url - A link to an official product image, for use under the ODBL.
+ * url - A link to an official product page.
+ * image - A link to an official product [image](http://schema.org/image), for use under the ODBL.
  * off:product_image_ingredients_url - A link to an official product image with ingredient text, for use under the ODBL.
  * off:product_image_nutrition_facts_url - A link to an official product image with the nutrition facts, for use under the ODBL.
  * off:labels_and_certifications - A comma delimited list of labels or certifications, such as ```Vegetarian,Halal```
  * off:ingredients_country_of_origin - The primary country where ingredients where sourced from
  * off:country_of_manufacture - The primary country where the product was manufactured
+
+### Imagery guidance
 
 
 ### Formats
@@ -70,8 +72,14 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
      "off": "http://openfoodfacts/schema/0.1/#"
    },
   "@type": "Product",
+  "additionalType": "off:OpenFoodFactsListing",
   "gtin13": "9310092000422",
   "name": "Apricot Nectar Fruit Drink",
+  "image": [
+    {"@type": "ImageObject", "contentUrl": "front.jpg", "description": "Product image"},
+    {"@type": "ImageObject", "contentUrl": "ingredients.jpg", "description": "Ingredients text"},
+    {"@type": "ImageObject", "contentUrl": "nutrition.jpg", "description": "Nutrition text"},
+  ]
   "off:country_where_sold": "Australia"
 }
 ```
