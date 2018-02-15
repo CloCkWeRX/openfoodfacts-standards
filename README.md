@@ -60,15 +60,20 @@ gtin13,name,off:country_where_sold
 #### Example JSON (JSON-LD)
 Use https://search.google.com/structured-data/testing-tool/u/0/ to check your data
 
+See https://developers.google.com/search/docs/guides/create-URLs for sitemap creation
+
 ```
-  {
-    "@context": {
-       "@vocab": "http://schema.org",
-       "off": "http://openfoodfacts/schema/0.1/"
-     },
-    "@type": "Product",
-    "gtin13": "9310092000422",
-    "name": "Apricot Nectar Fruit Drink",
-    "off:country_where_sold": "Australia"
-  }
+{
+  "@context": {
+     "@vocab": "http://schema.org",
+     "off": "http://openfoodfacts/schema/0.1/#"
+   },
+  "@type": "Product",
+  "gtin13": "9310092000422",
+  "name": "Apricot Nectar Fruit Drink",
+  "off:country_where_sold": "Australia"
+}
 ```
+
+### How can I get my data imported?
+Raise an issue via github linking to your data in either CSV or JSON-LD+Sitemap format.
