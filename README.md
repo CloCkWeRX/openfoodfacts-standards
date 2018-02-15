@@ -23,31 +23,52 @@ The recommended license for open database content is [ODBL](https://opendatacomm
 An OpenFoodFacts.org listing is a subclass of [schema.org/Product](http://schema.org/Product)
  * gtin13	- required - The EAN-13/GTIN-13 (barcode) code of the product.
  * name - required - Product name, excluding brand
- * country_where_sold - required - the primary country where this food product is sold, ie ```Australia```
+ * off:country_where_sold - required - the primary country where this food product is sold, ie ```Australia```
 
 #### Optional data
  * brand - the primary [schema.org/brand](http://schema.org/brand)
- * quantity - a string containing the units (Example: 350 g, 1 L)
- * ingredients_description - A textual ingredients description as per food labelling standards. Where possible, allegens can be highlighted with the use of underscores.
- * product_official_url - A link to an official product page.
- * product_image_front_url - A link to an official product image, for use under the ODBL.
- * product_image_ingredients_url - A link to an official product image with ingredient text, for use under the ODBL.
- * product_image_nutrition_facts_url - A link to an official product image with the nutrition facts, for use under the ODBL.
- * labels_and_certifications - A comma delimited list of labels or certifications, such as ```Vegetarian,Halal```
- * ingredients_country_of_origin - The primary country where ingredients where sourced from
- * country_of_manufacture - The primary country where the product was manufactured
+ * off:quantity - a string containing the units (Example: 350 g, 1 L)
+ * off:ingredients_description - A textual ingredients description as per food labelling standards. Where possible, allegens can be highlighted with the use of underscores.
+ * off:product_official_url - A link to an official product page.
+ * off:product_image_front_url - A link to an official product image, for use under the ODBL.
+ * off:product_image_ingredients_url - A link to an official product image with ingredient text, for use under the ODBL.
+ * off:product_image_nutrition_facts_url - A link to an official product image with the nutrition facts, for use under the ODBL.
+ * off:labels_and_certifications - A comma delimited list of labels or certifications, such as ```Vegetarian,Halal```
+ * off:ingredients_country_of_origin - The primary country where ingredients where sourced from
+ * off:country_of_manufacture - The primary country where the product was manufactured
 
 
 ### Formats
-JSON and CSV are the recommended publishing formats. Given openfoodfacts.org is an international project, the recommended filenaming convention is to put the RFC 5646 language code in the filename:
+CSV and JSON-LD are the recommended publishing formats, depending on your use case.
+
+CSV is good for bulk data extracts and singular values.
+
+JSON-LD is good for publishing your content for individual items, allowing both Google and OpenFoodFacts.org to retrieve them.
+When publishing with JSON-LD, a sitemap (list of URLs) is required.
+
+#### CSV
+Given openfoodfacts.org is an international project, the recommended filenaming convention is to put the RFC 5646 language code in the filename:
 ```
 0.1-products.en.csv
-0.1-products.en-AU.json
 ```
 
-#### Example CSV
+##### Example data
 ```
-gtin14,name,country_where_sold
+gtin13,name,off:country_where_sold
+"9310092000422","Apricot Nectar Fruit Drink","Australia"
+```
+#### Example JSON (JSON-LD)
+Use https://search.google.com/structured-data/testing-tool/u/0/ to check your data
 
 ```
-#### Example JSON
+  {
+    "@context": {
+       "@vocab": "http://schema.org",
+       "off": "http://openfoodfacts/schema/0.1/"
+     },
+    "@type": "Product",
+    "gtin13": "9310092000422",
+    "name": "Apricot Nectar Fruit Drink",
+    "off:country_where_sold": "Australia"
+  }
+```
