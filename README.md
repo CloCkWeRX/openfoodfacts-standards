@@ -65,6 +65,7 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
 ```
 {
   "@context": {
+     "@language": "en", 
      "@vocab": "http://schema.org",
      "off": "http://openfoodfacts/schema/0.1/#"
    },
@@ -76,4 +77,4 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
 ```
 
 ### How can I get my data imported?
-Raise an issue via github linking to your data in either CSV or JSON-LD+Sitemap format.
+Raise an [issue via github](https://github.com/openfoodfacts/openfoodfacts-server/issues) linking to your data in either CSV or JSON-LD+Sitemap format.
