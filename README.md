@@ -60,7 +60,7 @@ gtin13,name,off:country_where_sold
 "9310092000422","Apricot Nectar Fruit Drink","Australia"
 ```
 #### Example JSON (JSON-LD)
-Use https://search.google.com/structured-data/testing-tool/u/0/ to check your data
+Use [JSON-LD Playground](https://json-ld.org/playground/) and [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool/) to check your data
 
 See https://developers.google.com/search/docs/guides/create-URLs for sitemap creation
 
@@ -75,7 +75,7 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
   "additionalType": "off:OpenFoodFactsListing",
   "gtin13": "9310092000422",
   "name": "Apricot Nectar Fruit Drink",
-  "image": "front.jpg",
+  "image": "http://myserver.com/9310092000422/front.jpg",
   "off:country_where_sold": "Australia"
 }
 ```
