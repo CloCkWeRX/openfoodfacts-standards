@@ -6,13 +6,14 @@ If you are a producer of food, public health authority or food standards body, y
 
 ### Licensing
 
-The recommended license for open database content is (ODBL)[https://opendatacommons.org/licenses/odbl/] - conceptually very similar to Creative Commons, expressly designed for databases.
+The recommended license for open database content is [ODBL](https://opendatacommons.org/licenses/odbl/) - conceptually very similar to Creative Commons, expressly designed for databases.
 
 ### Schema
  * barcode - required
  * product name - required
  * quantity
  * ingredients_description
+ * product_official_url
  * product_image_front_url
  * product_image_ingredients_url
  * product_image_nutrition_facts_url
