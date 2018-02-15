@@ -75,11 +75,7 @@ See https://developers.google.com/search/docs/guides/create-URLs for sitemap cre
   "additionalType": "off:OpenFoodFactsListing",
   "gtin13": "9310092000422",
   "name": "Apricot Nectar Fruit Drink",
-  "image": [
-    {"@type": "ImageObject", "contentUrl": "front.jpg", "description": "Product image"},
-    {"@type": "ImageObject", "contentUrl": "ingredients.jpg", "description": "Ingredients text"},
-    {"@type": "ImageObject", "contentUrl": "nutrition.jpg", "description": "Nutrition text"},
-  ]
+  "image": "front.jpg",
   "off:country_where_sold": "Australia"
 }
 ```
