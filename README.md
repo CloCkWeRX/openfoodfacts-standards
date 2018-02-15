@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## Publish your food product data as open data
 
-You can use the [editor on GitHub](https://github.com/CloCkWeRX/openfoodfacts-standards/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+OpenFoodFacts.org is an open datastore with over half a million products, their ingredients and their imagery.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If you are a producer of food, public health authority or food standards body, you too can publish open data.
 
-### Markdown
+### Licensing
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The recommended license for open database content is (ODBL)[https://opendatacommons.org/licenses/odbl/] - conceptually very similar to Creative Commons, expressly designed for databases.
 
-```markdown
-Syntax highlighted code block
+### Schema
+ * barcode - required
+ * product name - required
+ * quantity
+ * ingredients_description
+ * product_image_front_url
+ * product_image_ingredients_url
+ * product_image_nutrition_facts_url
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Formats
+JSON and CSV are the recommended publishing formats. Given openfoodfacts.org is an international project, the recommended filenaming convention is to put the ISO 639‑1 (TODO: Check this) language code in the filename:
+```
+products.en.csv
+products.en-AU.json
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Example JSON
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CloCkWeRX/openfoodfacts-standards/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Example CSV
